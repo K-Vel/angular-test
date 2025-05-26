@@ -1,0 +1,32 @@
+@use "@angular/material" as mat;
+
+/* Variables */
+@use "./variables" as *;
+
+//Button
+// // 🎨 Custom
+$my-primary-palette: (
+  500: $accent-color-light,
+  // main background
+  700: $primary-light,
+  // hover
+  contrast:
+    (
+      500: $primary-light,
+      700: $accent-color-dark,
+    ),
+);
+
+$my-primary: mat.m2-define-palette($my-primary-palette, 500, 500, 700);
+$my-accent: mat.m2-define-palette($my-primary-palette, 500, 500, 700);
+
+$my-theme: mat.m2-define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+    ),
+  )
+);
+
+@include mat.button-theme($my-theme);
