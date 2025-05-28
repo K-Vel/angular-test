@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-hero-section',
-  imports: [],
+  imports: [MatButtonModule],
   templateUrl: './hero-section.component.html',
-  styleUrl: './hero-section.component.scss'
+  styleUrl: './hero-section.component.scss',
 })
-export class HeroSectionComponent {
-
-}
+export class HeroSectionComponent {}

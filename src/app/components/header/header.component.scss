@@ -58,7 +58,7 @@
 
   &__list-item {
     min-width: 94px;
-    color: var(--primary-light);
+    color: $primary-light;
     transition: color 0.3s;
 
     @media screen and (min-width: $bp-desktop) {
@@ -67,7 +67,7 @@
 
     &:hover {
       font-weight: 600;
-      color: var(--accent-color-light);
+      color: $accent-color-light;
     }
   }
 }
