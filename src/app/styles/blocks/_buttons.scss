@@ -1,0 +1,43 @@
+/* Buttons */
+
+// mobile
+// tablet
+// desktop
+
+/* Variables */
+@use "../variables" as *;
+
+.callback-button.mdc-button {
+  display: block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  @media screen and (min-width: $bp-desktop) {
+    min-height: 68px;
+    min-width: 200px;
+  }
+
+  &:hover {
+    color: $accent-color-dark;
+    background-color: $primary-light;
+  }
+}
+
+// Modificator hero
+.callback-button.mdc-button.callback-button--hero {
+  margin: 0px auto;
+  min-height: 38px;
+  min-width: 192px;
+
+  @media screen and (min-width: $bp-desktop) {
+    display: none;
+  }
+}
+
+// Modificator header
+.callback-button.mdc-button.callback-button--header {
+  display: none;
+
+  @media screen and (min-width: $bp-desktop) {
+    display: block;
+  }
+}

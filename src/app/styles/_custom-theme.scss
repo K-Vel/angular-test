@@ -3,16 +3,21 @@
 /* Variables */
 @use "./variables" as *;
 
+// Initializing core
+@include mat.core();
+
 //Button
 // // 🎨 Custom
 $my-primary-palette: (
   500: $accent-color-light,
   // main background
+  600: $primary-light,
   700: $primary-light,
   // hover
   contrast:
     (
       500: $primary-light,
+      600: $accent-color-dark,
       700: $accent-color-dark,
     ),
 );
@@ -20,13 +25,30 @@ $my-primary-palette: (
 $my-primary: mat.m2-define-palette($my-primary-palette, 500, 500, 700);
 $my-accent: mat.m2-define-palette($my-primary-palette, 500, 500, 700);
 
+// Typography
+$my-typography: mat.m2-define-typography-config(
+  $font-family: '"Poppins", Arial, sans-serif',
+  $button:
+    mat.m2-define-typography-level(
+      $font-size: 16px,
+      $line-height: 1.5,
+      $font-weight: 600,
+    ),
+);
+
 $my-theme: mat.m2-define-light-theme(
   (
     color: (
       primary: $my-primary,
       accent: $my-accent,
     ),
+    typography: $my-typography,
   )
 );
 
+//General
+// Adding theme to buttons
 @include mat.button-theme($my-theme);
+
+// Adding typography to all components
+@include mat.button-typography($my-typography);
