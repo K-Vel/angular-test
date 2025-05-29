@@ -4,7 +4,8 @@
 @use "./variables" as *;
 
 // Initializing core
-@include mat.core();
+@include mat.elevation-classes();
+@include mat.app-background();
 
 //Button
 // // 🎨 Custom
