@@ -51,5 +51,8 @@ $my-theme: mat.m2-define-light-theme(
 // Adding theme to buttons
 @include mat.button-theme($my-theme);
 
-// Adding typography to all components
+// Adding typography to buttons
 @include mat.button-typography($my-typography);
+
+// Adding typography to list
+@include mat.list-typography($my-typography);
