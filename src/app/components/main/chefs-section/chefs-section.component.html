@@ -1,1 +1,18 @@
-<p>chefs-section works!</p>
+<section class="chefs" id="chefs-section">
+  <div class="container">
+    <h2 class="chefs__title">
+      Наші найкращі
+      <span class="accent-color-dark">
+        <br />
+        шеф-кухарі</span
+      >
+    </h2>
+    <ul class="chefs__list-test">
+      @for (chef of chefs; track chef.name) {
+      <li class="chefs__list-item">
+        <app-chef [chef]="chef"></app-chef>
+      </li>
+      }
+    </ul>
+  </div>
+</section>

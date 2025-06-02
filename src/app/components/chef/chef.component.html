@@ -1,0 +1,17 @@
+<mat-card class="chef-card">
+  <mat-card-header>
+    <img
+      mat-card-sm-image
+      [src]="chef?.image"
+      [srcset]="chef?.image + ' 1x, ' + chef?.image2x + ' 2x'"
+      [alt]="chef?.alt"
+    />
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card-title>{{ chef?.name }}</mat-card-title>
+    <mat-card-subtitle>{{ chef?.greeting }}</mat-card-subtitle>
+    @for (paragraph of chef?.description; track $index) {
+    <p [innerHTML]="paragraph"></p>
+    }
+  </mat-card-content>
+</mat-card>
