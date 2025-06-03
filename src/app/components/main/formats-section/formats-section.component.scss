@@ -9,13 +9,16 @@
 
 .formats {
   padding: 20px 0px;
+  padding-bottom: 0px;
 
   @media screen and (min-width: $bp-tablet) {
     padding: 24px 0px;
+    padding-bottom: 0px;
   }
 
   @media screen and (min-width: $bp-desktop) {
     padding: 48px 0px;
+    padding-bottom: 0px;
   }
 
   &__title {
@@ -49,6 +52,15 @@
   &__swiper {
     overflow: hidden;
     padding: 20px 8px;
+    padding-bottom: 20px;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding-bottom: 24px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      padding-bottom: 48px;
+    }
   }
 }
 
