@@ -31,7 +31,7 @@ export class FormatsSectionComponent implements AfterViewInit {
   @ViewChild('nextBtn', { static: false }) nextBtn!: ElementRef;
 
   breakpoints = {
-    768: {
+    540: {
       slidesPerView: 2,
     },
     980: {
