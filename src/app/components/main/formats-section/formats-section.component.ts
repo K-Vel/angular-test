@@ -108,7 +108,6 @@ export class FormatsSectionComponent implements AfterViewInit {
 
   // To connect navigation custom buttons
   ngAfterViewInit() {
-    console.log(this.swiperEl, 'swiperEl');
     const swiperNativeEl = this.swiperEl.nativeElement as any;
 
     swiperNativeEl.navigation = {

@@ -17,7 +17,7 @@
         [breakpoints]="breakpoints"
         [pagination]="true"
       >
-        @for(format of formats; track format.title) {
+        @for(format of formats; track format) {
         <swiper-slide class="swiper-slide">
           <app-format
             [type]="format.type"
