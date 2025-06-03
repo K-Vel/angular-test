@@ -1,0 +1,103 @@
+/* Form */
+
+// mobile
+// tablet
+// desktop
+
+/* Variables */
+@use "../../styles/variables.scss" as *;
+
+.form {
+  text-align: start;
+
+  //   Modificator
+  &__field--modal {
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 32px;
+    }
+  }
+  //
+
+  //   Modificator
+  &__field--contacts {
+    margin-bottom: 24px;
+  }
+  //
+
+  &__input {
+    padding: 16px 42px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid $decor-dark;
+    border-radius: 8px;
+    background-color: transparent;
+
+    &:focus {
+      border-color: $accent-color-light;
+      outline: none;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.17;
+      color: $decor-dark;
+    }
+
+    &:focus::placeholder {
+      color: $primary-dark;
+    }
+
+    //Modificator
+    &--contacts {
+      padding: 8px 24px;
+
+      @media screen and (min-width: $bp-tablet) {
+        padding: 16px 42px;
+      }
+    }
+    //
+  }
+
+  &__policy {
+    max-width: 220px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: $primary-dark;
+  }
+
+  //Modificator
+  &__policy--contacts {
+    margin-top: 10px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-top: 0px;
+    }
+  }
+  //
+
+  &__confidentiality {
+    color: $primary-dark;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  &__error-message {
+    margin-top: 5px;
+    color: red;
+  }
+
+  //Modificator
+  &__error-message--general {
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 16px;
+    }
+  }
+  //
+}

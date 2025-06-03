@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { ContactFormComponent } from '../../contact-form/contact-form.component';
 
 @Component({
   selector: 'app-contacts-section',
-  imports: [],
+  imports: [ContactFormComponent],
   templateUrl: './contacts-section.component.html',
-  styleUrl: './contacts-section.component.scss'
+  styleUrl: './contacts-section.component.scss',
 })
-export class ContactsSectionComponent {
-
-}
+export class ContactsSectionComponent {}
