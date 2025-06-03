@@ -9,11 +9,14 @@
 
 .callback-button.mdc-button {
   display: block;
+  padding: 0px;
+  min-height: 42px;
+  border-radius: 8px;
+
   transition: background-color 0.2s ease, color 0.2s ease;
 
   @media screen and (min-width: $bp-desktop) {
     min-height: 58px;
-    min-width: 200px;
   }
 
   &:hover {
@@ -22,11 +25,21 @@
   }
 }
 
+.mdc-button__label {
+  padding: 0px 24px;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 0px 32px;
+  }
+}
+
 // Modificator hero
 .callback-button.mdc-button.callback-button--hero {
   margin: 0px auto;
-  min-height: 38px;
-  min-width: 192px;
+
+  @media screen and (min-width: $bp-tablet) {
+    min-height: 56px;
+  }
 
   @media screen and (min-width: $bp-desktop) {
     display: none;
@@ -39,5 +52,15 @@
 
   @media screen and (min-width: $bp-desktop) {
     display: block;
+  }
+}
+
+// Modificator contacts
+.callback-button.mdc-button.callback-button--contacts {
+  margin: 0px auto;
+  border: 2px solid $accent-color-light;
+
+  @media screen and (min-width: $bp-tablet) {
+    margin: 0px auto 16px;
   }
 }
