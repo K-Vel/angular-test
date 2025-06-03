@@ -1,0 +1,115 @@
+/* Format */
+
+// mobile
+// tablet
+// desktop
+
+/* Variables */
+@use "../../styles/variables.scss" as *;
+
+.format {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 442px;
+  padding: 24px;
+  font-size: 14px;
+  font-weight: 300;
+  color: $primary-light;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px;
+  transition: transform 0.3s;
+
+  @media screen and (min-width: $bp-tablet) {
+    height: 442px;
+
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    height: 442px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 16px;
+    }
+  }
+
+  //Modificator
+  &--walrus {
+    background-image: linear-gradient(
+        180deg,
+        rgba(49, 38, 26, 0) 55%,
+        rgba(49, 38, 26, 0.71) 73%,
+        $primary-dark 100%
+      ),
+      url("../../../assets/img/walrus.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(49, 38, 26, 0) 55%,
+          rgba(49, 38, 26, 0.71) 73%,
+          $primary-dark 100%
+        ),
+        url("../../../assets/img/walrus@2x.jpg");
+    }
+  }
+  //
+
+  //Modificator
+  &--horseshoe {
+    background-image: linear-gradient(
+        180deg,
+        rgba(49, 38, 26, 0) 55%,
+        rgba(49, 38, 26, 0.71) 73%,
+        $primary-dark 100%
+      ),
+      url("../../../assets/img/horseshoe.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(49, 38, 26, 0) 55%,
+          rgba(49, 38, 26, 0.71) 73%,
+          $primary-dark 100%
+        ),
+        url("../../../assets/img/horseshoe@2x.jpg");
+    }
+  }
+  //
+
+  //Modificator
+  &--handlebar {
+    background-image: linear-gradient(
+        180deg,
+        rgba(49, 38, 26, 0) 55%,
+        rgba(49, 38, 26, 0.71) 73%,
+        $primary-dark 100%
+      ),
+      url("../../../assets/img/handlebar.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(49, 38, 26, 0) 55%,
+          rgba(49, 38, 26, 0.71) 73%,
+          $primary-dark 100%
+        ),
+        url("../../../assets/img/handlebar@2x.jpg");
+    }
+  }
+}

@@ -1,0 +1,104 @@
+/* Formats */
+
+// mobile
+// tablet
+// desktop
+
+/* Variables */
+@use "../../../styles/variables.scss" as *;
+
+.formats {
+  padding: 20px 0px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 24px 0px;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 48px 0px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 4px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      margin-bottom: 60px;
+    }
+  }
+
+  // Content
+  &__carousel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 20px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 78px;
+    }
+  }
+
+  &__swiper {
+    overflow: hidden;
+    padding: 20px 8px;
+  }
+}
+
+//Carousel buttons
+.carousel-button {
+  display: none;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border: 1px solid $primary-dark;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, fill 0.2s ease;
+
+  //for icon
+  fill: $primary-dark;
+
+  @media screen and (min-width: $bp-tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    background-color: $primary-dark;
+
+    // for icon
+    fill: $primary-light;
+  }
+}
+
+/* Pagination */
+swiper-container::part(pagination) {
+  margin-top: 20px;
+  position: relative;
+}
+
+swiper-container::part(bullet) {
+  width: 12px;
+  height: 12px;
+  margin: 0px 10px;
+  background-color: $decor-dark;
+  opacity: 0.5;
+  transition: background-color 0.3s;
+}
+
+swiper-container::part(bullet-active) {
+  width: 12px;
+  height: 12px;
+  margin: 0px 10px;
+  background-color: $accent-color-dark;
+}
