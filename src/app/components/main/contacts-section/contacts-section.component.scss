@@ -63,21 +63,4 @@
       margin-bottom: 42px;
     }
   }
-
-  //Map
-  &__map {
-    min-height: 176px;
-    max-height: 600px;
-    border: 0;
-    border-radius: 16px;
-    margin: 0 -20px;
-
-    @media screen and (min-width: $bp-tablet) {
-      flex-basis: calc((100% - 20px) / 2);
-      margin: 0;
-    }
-    @media screen and (min-width: $bp-desktop) {
-      flex-basis: calc((100% - 32px) / 2);
-    }
-  }
 }
