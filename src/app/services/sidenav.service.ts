@@ -1,14 +1,22 @@
-import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SidenavService {
-  private toggleDrawerSource = new Subject<void>();
-  toggleDrawer$ = this.toggleDrawerSource.asObservable();
+  isOpen = signal(false);
+
+  drawerState = this.isOpen.asReadonly();
 
   toggle() {
-    this.toggleDrawerSource.next();
+    this.isOpen.update((state) => !state);
+  }
+
+  open() {
+    this.isOpen.set(true);
+  }
+
+  close() {
+    this.isOpen.set(false);
   }
 }
