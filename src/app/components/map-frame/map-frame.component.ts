@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { ErrorComponent } from '../error/error.component';
 
 @Component({
   selector: 'app-map-frame',
