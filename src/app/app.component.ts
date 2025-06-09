@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BenefitsSectionComponent } from './components/main/benefits-section/benefits-section.component';
@@ -15,7 +14,6 @@ import { SidenavService } from './services/sidenav.service';
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet,
     HeaderComponent,
     FooterComponent,
     HeroSectionComponent,
