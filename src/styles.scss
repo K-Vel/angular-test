@@ -10,11 +10,14 @@
 /* Utils */
 @use "./app/styles/utils" as *;
 
-/* Сustom-theme */
+/* Custom-theme */
 @use "./app/styles/custom-theme" as *;
 
 /* Buttons */
 @use "./app/styles/blocks/buttons" as *;
+
+/* Custom dialog container */
+@use "./app/components/callback-dialog/custom-dialog-container-styles.scss" as *;
 
 //General
 

@@ -1,0 +1,17 @@
+/* Backdrop */
+
+// mobile
+// tablet
+// desktop
+
+/* Variables */
+@use "../../styles/variables.scss" as *;
+
+.cdk-overlay-pane.custom-dialog-container.mat-mdc-dialog-panel {
+  max-width: 880px;
+
+  .mat-mdc-dialog-surface {
+    background-color: $primary-light;
+    border-radius: 32px;
+  }
+}
