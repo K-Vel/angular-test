@@ -1,5 +1,5 @@
 <!-- Header Section -->
-<header class="header">
+<header class="header" appHeader>
   <div class="container">
     <div class="header__inner">
       <!-- Navigation -->
@@ -21,6 +21,15 @@
           </li>
           <li>
             <a class="header__list-item" href="#contacts-section">Контакти</a>
+          </li>
+          <li>
+            <a
+              class="header__list-item"
+              routerLink="/sponsor"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Яспонсор</a
+            >
           </li>
         </ul>
       </nav>

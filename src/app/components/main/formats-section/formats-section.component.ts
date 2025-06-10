@@ -25,7 +25,6 @@ interface FormatData {
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class FormatsSectionComponent implements AfterViewInit {
-  // Получаем ссылки на элементы из шаблона
   @ViewChild('swiperEl', { static: false }) swiperEl!: ElementRef;
   @ViewChild('prevBtn', { static: false }) prevBtn!: ElementRef;
   @ViewChild('nextBtn', { static: false }) nextBtn!: ElementRef;

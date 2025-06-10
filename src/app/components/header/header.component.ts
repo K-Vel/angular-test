@@ -4,10 +4,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { SidenavService } from '../../services/sidenav.service';
 import { MatDialog } from '@angular/material/dialog';
 import { CallbackDialogComponent } from '../callback-dialog/callback-dialog.component';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { HeaderDirective } from './header.directive';
 
 @Component({
   selector: 'app-header',
-  imports: [MatButtonModule, MatIconModule],
+  imports: [
+    MatButtonModule,
+    MatIconModule,
+    RouterLink,
+    RouterLinkActive,
+    HeaderDirective,
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
