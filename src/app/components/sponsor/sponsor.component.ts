@@ -8,6 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { CanDeactivateForm } from '../../guards/unsaved-changes.guard';
 
 @Component({
   selector: 'app-sponsor',
@@ -20,7 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './sponsor.component.html',
   styleUrl: './sponsor.component.scss',
 })
-export class SponsorComponent {
+export class SponsorComponent implements CanDeactivateForm {
   sponsorForm!: FormGroup;
   showGeneralError = false;
 
