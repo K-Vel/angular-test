@@ -1,0 +1,97 @@
+<section class="sponsor">
+  <div class="container">
+    <div class="sponsor__content">
+      <form
+        [formGroup]="sponsorForm"
+        (ngSubmit)="onSubmit()"
+        class="sponsor-form"
+      >
+        <h2 class="sponsor-form__title">Заповніть форму</h2>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Ім'я</mat-label>
+          <input
+            matInput
+            formControlName="name"
+            placeholder="Введіть ваше ім'я"
+          />
+
+          @if (sponsorForm.get('name')?.touched &&
+          sponsorForm.get('name')?.hasError('required')) {
+          <mat-error>Обов'язкове поле</mat-error>
+          } @if (sponsorForm.get('name')?.hasError('minlength')) {
+          <mat-error>Мінімум 2 символи</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            formControlName="email"
+            placeholder="example@mail.com"
+            type="email"
+          />
+
+          @if (sponsorForm.get('email')?.touched &&
+          sponsorForm.get('email')?.hasError('required')) {
+          <mat-error>Обов'язкове поле</mat-error>
+          } @if (sponsorForm.get('email')?.hasError('email')) {
+          <mat-error>Невірний формат імейлу</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Номер телефону</mat-label>
+          <input
+            matInput
+            formControlName="phone"
+            placeholder="+380 XX XXX XX XX"
+          />
+
+          @if (sponsorForm.get('phone')?.touched &&
+          sponsorForm.get('phone')?.hasError('required')) {
+          <mat-error>Обов'язкове поле</mat-error>
+          } @if (sponsorForm.get('phone')?.hasError('pattern')) {
+          <mat-error>Невірний формат телефону</mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Ваші пропозиції чи коментар</mat-label>
+          <textarea
+            matInput
+            formControlName="comment"
+            placeholder="Введіть ваші пропозиції чи коментар"
+            rows="4"
+          ></textarea>
+
+          @if (sponsorForm.get('comment')?.touched &&
+          sponsorForm.get('comment')?.hasError('maxlength')) {
+          <mat-error>Максимум 500 символів</mat-error>
+          }
+        </mat-form-field>
+
+        <button
+          matButton="filled"
+          color="primary"
+          class="callback-button callback-button--contacts"
+          type="submit"
+        >
+          Замовити дзвінок
+        </button>
+
+        <p class="sponsor-form__policy">
+          Натискаючи на кнопку я погоджуюсь з
+          <a
+            class="sponsor-form__confidentiality"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            >політикою конфіденційності</a
+          >
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
