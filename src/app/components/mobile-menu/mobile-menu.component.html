@@ -10,7 +10,8 @@
       <li>
         <a
           class="mobile-menu__list-item"
-          href="#traditions-section"
+          routerLink="."
+          fragment="traditions-section"
           (click)="toggle()"
           >Наші традиції</a
         >
@@ -18,7 +19,8 @@
       <li>
         <a
           class="mobile-menu__list-item"
-          href="#chefs-section"
+          routerLink="."
+          fragment="chefs-section"
           (click)="toggle()"
           >Шеф-кухарі</a
         >
@@ -26,7 +28,8 @@
       <li>
         <a
           class="mobile-menu__list-item"
-          href="#formats-section"
+          routerLink="."
+          fragment="formats-section"
           (click)="toggle()"
           >Формати</a
         >
@@ -34,9 +37,15 @@
       <li>
         <a
           class="mobile-menu__list-item"
-          href="#contacts-section"
+          routerLink="."
+          fragment="contacts-section"
           (click)="toggle()"
           >Контакти</a
+        >
+      </li>
+      <li>
+        <a class="header__list-item" routerLink="/sponsor" (click)="toggle()"
+          >Яспонсор</a
         >
       </li>
     </ul>
