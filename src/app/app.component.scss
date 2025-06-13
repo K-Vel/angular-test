@@ -1,6 +1,20 @@
+// mobile
+// tablet
+// desktop
+
 /* Variables */
 @use "./styles/variables.scss" as *;
 
 .mat-drawer-container {
   background-color: $primary-light;
+}
+
+.main-spinner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin: 150px auto;
 }

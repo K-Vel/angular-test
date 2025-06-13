@@ -4,6 +4,7 @@
   ></mat-drawer>
   <mat-drawer-content>
     <app-header></app-header>
+    @if (isLoading) { <app-spinner class="main-spinner"></app-spinner> }
     <router-outlet> </router-outlet>
     <app-footer></app-footer>
   </mat-drawer-content>

@@ -1,9 +1,9 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SpinnerComponent } from '../spinner/spinner.component';
 
 @Component({
   selector: 'app-map-frame',
-  imports: [MatProgressSpinnerModule],
+  imports: [SpinnerComponent],
   templateUrl: './map-frame.component.html',
   styleUrl: './map-frame.component.scss',
 })
