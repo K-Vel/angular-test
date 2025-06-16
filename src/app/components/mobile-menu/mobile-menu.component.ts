@@ -12,7 +12,7 @@ export class MobileMenuComponent {
   constructor(private sidenavService: SidenavService) {}
 
   // To close the mobile menu
-  toggle() {
+  onToggle() {
     this.sidenavService.toggle();
   }
 }

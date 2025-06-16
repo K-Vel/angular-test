@@ -26,7 +26,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  private sidenavService = inject(SidenavService);
+  sidenavService = inject(SidenavService);
 
   isLoading = false;
 
@@ -38,13 +38,5 @@ export class AppComponent {
         this.isLoading = false;
       }
     });
-  }
-
-  toggle() {
-    this.sidenavService.toggle();
-  }
-
-  get drawerState() {
-    return this.sidenavService.drawerState;
   }
 }

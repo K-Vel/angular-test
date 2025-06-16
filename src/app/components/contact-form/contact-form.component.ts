@@ -21,7 +21,7 @@ export class ContactFormComponent {
     this.createForm();
   }
 
-  createForm() {
+  createForm(): void {
     this.contactForm = this.fb.group({
       username: ['', Validators.required],
       phone: ['', [Validators.required, Validators.pattern(/^\+[0-9]{12}$/)]],
@@ -32,7 +32,7 @@ export class ContactFormComponent {
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.contactForm.valid) {
       this.contactForm.reset();
       this.showGeneralError = false;

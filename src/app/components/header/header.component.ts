@@ -25,7 +25,7 @@ export class HeaderComponent {
   constructor(private sidenavService: SidenavService) {}
 
   // To open the mobile menu
-  toggle() {
+  onToggle() {
     this.sidenavService.toggle();
   }
 

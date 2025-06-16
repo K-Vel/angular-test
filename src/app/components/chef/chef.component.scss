@@ -61,7 +61,7 @@
   .mat-mdc-card-content {
     display: flex;
     flex-direction: column;
-    padding: 0 0 0 0;
+    padding: 0px;
     gap: 8px;
 
     @media screen and (min-width: $bp-tablet) {
