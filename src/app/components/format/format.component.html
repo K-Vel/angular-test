@@ -1,0 +1,8 @@
+<article class="format format--{{ type }}">
+  <h4 class="format__title" lang="en">{{ title }}</h4>
+  <ol>
+    @for(item of formats; track item) {
+    <li>{{ item }}</li>
+    }
+  </ol>
+</article>

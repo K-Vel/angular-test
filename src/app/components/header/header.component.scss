@@ -1,0 +1,113 @@
+/* Header */
+
+// mobile
+// tablet
+// desktop
+
+@use "@angular/material" as mat;
+
+/* Variables */
+@use "../../styles/variables.scss" as *;
+
+.header {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 0px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 32px 0px;
+  }
+
+  //Content
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+  // Navigation
+  &__navigation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    gap: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__list {
+    display: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      gap: 40px;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 64px;
+    }
+  }
+
+  &__list-item {
+    min-width: 94px;
+    color: $primary-light;
+    transition: color 0.3s;
+
+    @media screen and (min-width: $bp-desktop) {
+      min-width: 122px;
+    }
+
+    &:hover {
+      font-weight: 600;
+      color: $accent-color-light;
+    }
+  }
+}
+
+/* Burger button */
+.mdc-fab.mat-mdc-fab-base {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  box-shadow: none;
+  transition: fill 0.2s ease;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    display: none;
+  }
+}
+
+.mat-icon {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  @include mat.icon-overrides(
+    (
+      color: $primary-light,
+    )
+  );
+
+  &:hover {
+    @include mat.icon-overrides(
+      (
+        color: $primary-dark,
+      )
+    );
+  }
+}

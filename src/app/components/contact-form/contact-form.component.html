@@ -1,0 +1,86 @@
+<form
+  [formGroup]="contactForm"
+  (ngSubmit)="onSubmit()"
+  class="form"
+  name="contacts-form"
+>
+  <div class="form__field form__field--contacts">
+    <label class="visually-hidden" for="username-contacts">Username:</label>
+    <input
+      class="form__input form__input--contacts"
+      type="text"
+      id="username-contacts"
+      formControlName="username"
+      required
+      placeholder="Ім’я"
+    />
+    @if (contactForm.get('username')?.invalid &&
+    contactForm.get('username')?.touched) {
+    <div class="form__error-message">Будь ласка, введіть ваше ім'я</div>
+    }
+  </div>
+
+  <div class="form__field form__field--contacts">
+    <label class="visually-hidden" for="phone-contacts"
+      >Enter your phone number:</label
+    >
+    <input
+      class="form__input form__input--contacts"
+      type="tel"
+      id="phone-contacts"
+      formControlName="phone"
+      required
+      placeholder="Телефон"
+    />
+    @if (contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched)
+    {
+    <div class="form__error-message">
+      Введіть телефон у форматі +XXXXXXXXXXXX
+    </div>
+    }
+  </div>
+
+  <div class="form__field form__field--contacts">
+    <label class="visually-hidden" for="email-contacts">Email</label>
+    <input
+      class="form__input form__input--contacts"
+      type="email"
+      id="email-contacts"
+      formControlName="email"
+      required
+      placeholder="Електронна пошта"
+    />
+    @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched)
+    {
+    <div class="form__error-message">Введіть коректний email</div>
+    }
+  </div>
+
+  <button
+    matButton="filled"
+    color="primary"
+    class="callback-button callback-button--contacts"
+    type="submit"
+    [disabled]="!contactForm.valid && contactForm.touched"
+  >
+    Замовити дзвінок
+  </button>
+
+  @if (showGeneralError && !(contactForm.get('email')?.touched ||
+  contactForm.get('phone')?.touched || contactForm.get('username')?.touched)) {
+  <div class="form__error-message form__error-message--general">
+    Введіть коректні дані
+  </div>
+  }
+
+  <p class="form__policy form__policy--contacts">
+    Натискаючи на кнопку я погоджуюсь з
+    <a
+      class="form__confidentiality"
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      >політикою конфіденційності</a
+    >
+  </p>
+</form>

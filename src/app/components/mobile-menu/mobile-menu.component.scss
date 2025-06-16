@@ -1,0 +1,58 @@
+/* Mobile menu */
+
+// mobile
+// tablet
+// desktop
+
+/* Variables */
+@use "../../styles/variables.scss" as *;
+
+.mobile-menu {
+  padding: 20px;
+
+  //Decoration
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 122px;
+    width: 96px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../../assets/img/decoration/mobile-menu-bread.png");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../../../assets/img/decoration/mobile-menu-bread@2x.png");
+    }
+  }
+
+  // Content
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__logo {
+    width: 72px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__list-item {
+    color: $primary-dark;
+    transition: color 1s ease;
+
+    &:hover {
+      font-weight: 600;
+      color: $accent-color-light;
+    }
+  }
+}

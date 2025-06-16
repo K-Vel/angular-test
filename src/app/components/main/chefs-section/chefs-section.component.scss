@@ -1,0 +1,87 @@
+/* Chefs section */
+
+// mobile
+// tablet
+// desktop
+
+/* Variables */
+@use "../../../styles/variables.scss" as *;
+
+.chefs {
+  padding: 20px 0px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 24px 0px;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 48px 0px;
+  }
+
+  &__title {
+    position: relative;
+
+    margin-bottom: 24px;
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      margin-bottom: 80px;
+    }
+
+    //Title decoration
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 24px;
+      display: none;
+      border: 2px solid $decor-light;
+
+      @media screen and (min-width: $bp-tablet) {
+        display: block;
+        width: 240px;
+      }
+
+      @media screen and (min-width: $bp-desktop) {
+        width: 352px;
+      }
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  //Content
+  &__list-test {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 40px 24px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 40px 32px;
+    }
+  }
+
+  &__list-item {
+    @media screen and (min-width: $bp-tablet) {
+      flex-basis: calc((100% - 24px) / 2);
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-basis: calc((100% - 32px) / 2);
+    }
+  }
+}

@@ -1,0 +1,55 @@
+// Imports
+/* Variables */
+@use "./variables" as *;
+
+// Position
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.reversed {
+  transform: rotate(180deg);
+}
+
+// Text
+.accent-color-light {
+  color: $accent-color-light;
+}
+
+.accent-color-dark {
+  color: $accent-color-dark;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.copyright {
+  font-size: 12px;
+  font-weight: 400;
+  color: $decor-dark;
+
+  @media screen and (min-width: $bp-desktop) {
+    font-size: 14px;
+  }
+}
+
+.text-limited {
+  @media screen and (min-width: $bp-tablet) {
+    max-width: 340px;
+  }
+}
+
+// Other
+.no-scroll {
+  overflow: hidden;
+}

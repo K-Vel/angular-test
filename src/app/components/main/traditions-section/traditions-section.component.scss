@@ -1,0 +1,74 @@
+/* Tradition section */
+
+// mobile
+// tablet
+// desktop
+
+/* Variables */
+@use "../../../styles/variables.scss" as *;
+
+.traditions {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    padding-top: 96px;
+    padding-bottom: 48px;
+  }
+
+  // Content
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 710px;
+    gap: 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 42px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 300;
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+
+  &__img {
+    display: none;
+    border-radius: 400px 400px 0px 0px;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+      max-width: 340px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      max-width: 480px;
+    }
+  }
+}

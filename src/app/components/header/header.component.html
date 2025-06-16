@@ -1,0 +1,40 @@
+<!-- Header Section -->
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <!-- Navigation -->
+      <nav class="header__navigation">
+        <a href="/" class="header__logo"
+          ><img src="assets/img/logo.svg" alt="Логотип сучасної пекарні"
+        /></a>
+        <ul class="header__list">
+          <li>
+            <a class="header__list-item" href="#traditions-section"
+              >Наші традиції</a
+            >
+          </li>
+          <li>
+            <a class="header__list-item" href="#chefs-section">Шеф-кухарі</a>
+          </li>
+          <li>
+            <a class="header__list-item" href="#formats-section">Формати</a>
+          </li>
+          <li>
+            <a class="header__list-item" href="#contacts-section">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <button
+        matButton="filled"
+        color="primary"
+        class="callback-button callback-button--header modal-btn-open"
+        (click)="openDialog()"
+      >
+        Замовити дзвінок
+      </button>
+      <button matMiniFab aria-label="Menu open" (click)="onToggle()">
+        <mat-icon fontIcon="menu_open">Menu</mat-icon>
+      </button>
+    </div>
+  </div>
+</header>
