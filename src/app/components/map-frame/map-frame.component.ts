@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, effect, ElementRef, viewChild } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
@@ -7,16 +7,21 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   templateUrl: './map-frame.component.html',
   styleUrl: './map-frame.component.scss',
 })
-export class MapFrameComponent implements AfterViewInit {
-  @ViewChild('mapIframe') mapIframe!: ElementRef<HTMLIFrameElement>;
+export class MapFrameComponent {
+  mapIframe = viewChild<ElementRef>('mapIframe');
+  isMapLoaded: boolean = false;
 
-  isMapLoaded = false;
+  constructor() {
+    effect((onCleanup) => {
+      const iframe = this.mapIframe();
+      if (!iframe) return;
 
-  ngAfterViewInit() {
-    const iframe = this.mapIframe.nativeElement;
+      const listener = () => (this.isMapLoaded = true);
+      iframe.nativeElement.addEventListener('load', listener);
 
-    iframe.addEventListener('load', () => {
-      this.isMapLoaded = true;
+      onCleanup(() => {
+        iframe.nativeElement.removeEventListener('load', listener);
+      });
     });
   }
 }

@@ -29,13 +29,5 @@ import { SidenavService } from './services/sidenav.service';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  private sidenavService = inject(SidenavService);
-
-  toggle() {
-    this.sidenavService.toggle();
-  }
-
-  get drawerState() {
-    return this.sidenavService.drawerState;
-  }
+  public sidenavService = inject(SidenavService);
 }

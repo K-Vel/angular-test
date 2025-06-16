@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
 export class FormatComponent {
   @Input() type!: string;
   @Input() title!: string;
-  @Input() items!: string[];
+  @Input() formats!: string[];
 }
