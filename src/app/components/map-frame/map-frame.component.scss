@@ -4,8 +4,6 @@
 // tablet
 // desktop
 
-@use "@angular/material" as mat;
-
 /* Variables */
 @use "../../styles/variables.scss" as *;
 
@@ -33,23 +31,4 @@
     height: 100%;
     border-radius: 16px;
   }
-}
-
-.spinner {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  right: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mat-mdc-progress-spinner {
-  @include mat.progress-spinner-overrides(
-    (
-      active-indicator-color: $accent-color-light,
-    )
-  );
 }

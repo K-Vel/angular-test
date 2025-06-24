@@ -1,0 +1,75 @@
+/* Sponsor page */
+
+// mobile
+// tablet
+// desktop
+
+@use "@angular/material" as mat;
+
+/* Variables */
+@use "../../styles/variables.scss" as *;
+
+.sponsor {
+  padding: 40px 0px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 96px 0px;
+  }
+
+  //Content
+  &__content {
+    display: flex;
+  }
+}
+
+.sponsor-form {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  gap: 10px;
+  margin: 0px auto;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 10px;
+    color: $primary-dark;
+  }
+
+  .mat-mdc-form-field {
+    @include mat.form-field-overrides(
+      (
+        //label
+        outlined-label-text-color: $decor-dark,
+        outlined-hover-label-text-color: $accent-color-light,
+        outlined-focus-label-text-color: $accent-color-light,
+
+        //placeholder
+        outlined-input-text-placeholder-color: $decor-dark,
+
+        //border
+        outlined-outline-color: $decor-dark,
+        outlined-hover-outline-color: $accent-color-light,
+        outlined-focus-outline-color: $accent-color-light
+      )
+    );
+  }
+
+  &__policy {
+    max-width: 220px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: $primary-dark;
+  }
+
+  &__confidentiality {
+    color: $primary-dark;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
+
+.currency__content {
+  padding: 20px;
+}

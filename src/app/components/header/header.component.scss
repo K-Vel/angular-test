@@ -71,6 +71,11 @@
       font-weight: 600;
       color: $accent-color-light;
     }
+
+    &.active {
+      font-weight: 600;
+      color: $accent-color-light;
+    }
   }
 }
 

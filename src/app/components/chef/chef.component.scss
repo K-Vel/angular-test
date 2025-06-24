@@ -36,6 +36,7 @@
     height: auto;
     max-width: 140px;
     border-radius: 4px 4px 4px 200px;
+    background-color: transparent;
     box-shadow: -10px 10px 0 0px $primary-light, -10px 10px 0 2px $decor-dark;
 
     @media screen and (min-width: $bp-tablet) {

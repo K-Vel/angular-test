@@ -1,0 +1,31 @@
+<div class="confirm-dialog">
+  @if (data.title) {
+  <h3 class="confirm-dialog__header">{{ data.title }}</h3>
+  }
+
+  <mat-dialog-content>
+    <p>{{ data.message }}</p>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button
+      matButton="filled"
+      color="primary"
+      class="callback-button callback-button--dialog-cancel"
+      type="submit"
+      (click)="onCancel()"
+    >
+      {{ data.cancelText }}
+    </button>
+
+    <button
+      matButton="filled"
+      color="primary"
+      class="callback-button callback-button--dialog-confirm"
+      type="submit"
+      (click)="onConfirm()"
+    >
+      {{ data.confirmText }}
+    </button>
+  </mat-dialog-actions>
+</div>

@@ -1,0 +1,30 @@
+/* Currency */
+
+// mobile
+// tablet
+// desktop
+
+@use "@angular/material" as mat;
+
+/* Variables */
+@use "../../styles/variables.scss" as *;
+
+.currency {
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    color: $primary-dark;
+  }
+
+  @include mat.table-overrides(
+    (
+      background-color: transparent,
+    )
+  );
+
+  @include mat.progress-bar-overrides(
+    (
+      active-indicator-color: $accent-color-dark,
+    )
+  );
+}

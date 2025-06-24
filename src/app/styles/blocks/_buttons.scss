@@ -27,10 +27,6 @@
 
 .mdc-button__label {
   padding: 0px 24px;
-
-  @media screen and (min-width: $bp-desktop) {
-    padding: 0px 32px;
-  }
 }
 
 // Modificator hero
@@ -62,5 +58,34 @@
 
   @media screen and (min-width: $bp-tablet) {
     margin: 0px auto 16px;
+  }
+}
+
+// Modificator dialog confirm
+.callback-button.mdc-button.callback-button--dialog-confirm {
+  margin: 0px auto;
+  min-width: 80px;
+  border: 2px solid $accent-color-light;
+
+  @media screen and (min-width: $bp-tablet) {
+    margin: 0px auto 16px;
+  }
+}
+
+// Modificator dialog cancel
+.callback-button.mdc-button.callback-button--dialog-cancel {
+  margin: 0px auto;
+  min-width: 80px;
+  background-color: transparent;
+  color: $accent-color-light;
+  border: 2px solid $accent-color-light;
+
+  @media screen and (min-width: $bp-tablet) {
+    margin: 0px auto 16px;
+  }
+
+  &:hover {
+    color: $primary-light;
+    background-color: $accent-color-dark;
   }
 }
