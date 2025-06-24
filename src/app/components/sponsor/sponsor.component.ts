@@ -9,6 +9,7 @@ import {
 } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { CanDeactivateForm } from '../../guards/unsaved-changes.guard';
+import { CurrencyComponent } from '../currency/currency.component';
 
 @Component({
   selector: 'app-sponsor',
@@ -17,6 +18,7 @@ import { CanDeactivateForm } from '../../guards/unsaved-changes.guard';
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,
+    CurrencyComponent,
   ],
   templateUrl: './sponsor.component.html',
   styleUrl: './sponsor.component.scss',
