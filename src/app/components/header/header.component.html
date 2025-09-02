@@ -1,5 +1,5 @@
 <!-- Header Section -->
-<header class="header">
+<header class="header" appHeader>
   <div class="container">
     <div class="header__inner">
       <!-- Navigation -->
@@ -9,18 +9,42 @@
         /></a>
         <ul class="header__list">
           <li>
-            <a class="header__list-item" href="#traditions-section"
+            <a
+              class="header__list-item"
+              routerLink="."
+              fragment="traditions-section"
               >Наші традиції</a
             >
           </li>
           <li>
-            <a class="header__list-item" href="#chefs-section">Шеф-кухарі</a>
+            <a class="header__list-item" routerLink="." fragment="chefs-section"
+              >Шеф-кухарі</a
+            >
           </li>
           <li>
-            <a class="header__list-item" href="#formats-section">Формати</a>
+            <a
+              class="header__list-item"
+              routerLink="."
+              fragment="formats-section"
+              >Формати</a
+            >
           </li>
           <li>
-            <a class="header__list-item" href="#contacts-section">Контакти</a>
+            <a
+              class="header__list-item"
+              routerLink="."
+              fragment="contacts-section"
+              >Контакти</a
+            >
+          </li>
+          <li>
+            <a
+              class="header__list-item"
+              routerLink="/sponsor"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Яспонсор</a
+            >
           </li>
         </ul>
       </nav>

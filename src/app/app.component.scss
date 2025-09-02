@@ -1,12 +1,20 @@
+// mobile
+// tablet
+// desktop
+
 /* Variables */
 @use "./styles/variables.scss" as *;
 
-@use "@angular/material" as mat;
-
 .mat-drawer-container {
-  @include mat.sidenav-overrides(
-    (
-      container-background-color: $primary-light,
-    )
-  );
+  background-color: $primary-light;
+}
+
+.main-spinner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin: 150px auto;
 }

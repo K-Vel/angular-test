@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { SidenavService } from '../../services/sidenav.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-menu',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './mobile-menu.component.html',
   styleUrl: './mobile-menu.component.scss',
 })

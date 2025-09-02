@@ -1,0 +1,23 @@
+.confirm-dialog {
+  max-width: 400px;
+  padding: 16px;
+
+  &__header {
+    margin: 16px 0px;
+    text-align: center;
+  }
+
+  .mat-mdc-dialog-content {
+    margin-bottom: 24px;
+    padding: 0 8px;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .mat-mdc-dialog-actions {
+    padding: 8px 0 0 0;
+    margin-bottom: -8px;
+  }
+}
