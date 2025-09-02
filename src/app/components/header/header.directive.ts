@@ -1,11 +1,17 @@
-import { Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  Renderer2,
+} from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 
 @Directive({
   selector: '[appHeader]',
 })
-export class HeaderDirective implements OnInit {
+export class HeaderDirective implements OnInit, OnDestroy {
   private routerSub!: Subscription;
 
   constructor(

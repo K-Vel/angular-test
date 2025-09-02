@@ -1,5 +1,13 @@
+/* Dialog window */
+
+// mobile
+// tablet
+// desktop
+
+/* Variables */
+@use "../../styles/variables.scss" as *;
+
 .confirm-dialog {
-  max-width: 400px;
   padding: 16px;
 
   &__header {
@@ -17,7 +25,17 @@
   }
 
   .mat-mdc-dialog-actions {
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 8px 0 0 0;
     margin-bottom: -8px;
+
+    .mat-mdc-button-base {
+      flex: 1;
+      min-width: 0;
+      margin: 0 auto;
+    }
   }
 }
