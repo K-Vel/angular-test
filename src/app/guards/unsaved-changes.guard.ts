@@ -17,7 +17,9 @@ export const unsavedChangesGuard: CanDeactivateFn<CanDeactivateForm> = (
     return true;
   }
   const dialogRef = dialog.open(ConfirmDialogComponent, {
+    maxWidth: '400px',
     width: '400px',
+    minHeight: '230px',
     data: {
       title: 'Підтвердіть дію',
       message:

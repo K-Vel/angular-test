@@ -31,7 +31,7 @@ export class SponsorComponent implements CanDeactivateForm {
     this.createForm();
   }
 
-  createForm() {
+  createForm(): void {
     this.sponsorForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
@@ -43,7 +43,7 @@ export class SponsorComponent implements CanDeactivateForm {
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.sponsorForm.valid) {
       this.sponsorForm.reset();
 

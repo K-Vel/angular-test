@@ -5,6 +5,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.component';
 import { SidenavService } from './services/sidenav.service';
 import {
+  NavigationCancel,
   NavigationEnd,
   NavigationStart,
   Router,
@@ -34,7 +35,10 @@ export class AppComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.isLoading = true;
-      } else if (event instanceof NavigationEnd) {
+      } else if (
+        event instanceof NavigationEnd ||
+        event instanceof NavigationCancel
+      ) {
         this.isLoading = false;
       }
     });

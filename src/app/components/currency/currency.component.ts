@@ -16,13 +16,12 @@ export class CurrencyComponent implements OnInit {
   displayedColumns: string[] = ['name', 'rateBuy', 'rateSell'];
 
   currencyRates$!: Observable<MonoData[] | null>;
-  isLoading = false;
+  isLoading = true;
   error: string | null = null;
 
   constructor(private currencyService: CurrencyService) {}
 
   ngOnInit(): void {
-    this.isLoading = true;
     this.currencyRates$ = this.currencyService.getCurrencyRates().pipe(
       catchError((err) => {
         this.error = 'Не вдалось завантажити курс валют.';
